@@ -2,7 +2,7 @@
   "profiles": {
     "brx_converter_cli": {
       "commandName": "Project",
-      "commandLineArgs": "\"C:\\Users\\Jean-Simon\\Documents\\BMW - Music\" ./output"
+      "commandLineArgs": "\"C:\\Users\\Jean-Simon\\Documents\\BMW - Music\\small_sample\" \"C:\\Users\\Jean-Simon\\Documents\\BMW - Music\\converted\""
     }
   }
 }
