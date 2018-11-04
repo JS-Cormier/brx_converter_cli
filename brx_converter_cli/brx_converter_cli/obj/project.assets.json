@@ -687,11 +687,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\dev\\personal\\brx_converter_cli\\brx_converter_cli\\brx_converter_cli\\brx_converter_cli\\brx_converter_cli.csproj",
+      "projectUniqueName": "C:\\dev\\personal\\brx_converter_cli\\brx_converter_cli\\brx_converter_cli\\brx_converter_cli.csproj",
       "projectName": "brx_converter_cli",
-      "projectPath": "C:\\dev\\personal\\brx_converter_cli\\brx_converter_cli\\brx_converter_cli\\brx_converter_cli\\brx_converter_cli.csproj",
+      "projectPath": "C:\\dev\\personal\\brx_converter_cli\\brx_converter_cli\\brx_converter_cli\\brx_converter_cli.csproj",
       "packagesPath": "C:\\Users\\Jean-Simon\\.nuget\\packages\\",
-      "outputPath": "C:\\dev\\personal\\brx_converter_cli\\brx_converter_cli\\brx_converter_cli\\brx_converter_cli\\obj\\",
+      "outputPath": "C:\\dev\\personal\\brx_converter_cli\\brx_converter_cli\\brx_converter_cli\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

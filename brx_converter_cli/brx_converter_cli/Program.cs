@@ -1,4 +1,5 @@
-﻿using System;
+﻿using brx_converter_cli.Controllers;
+using System;
 
 namespace brx_converter_cli
 {
@@ -8,7 +9,12 @@ namespace brx_converter_cli
         {
             var inputFolder = args[0];
             var outputFolder = args[1];
-            Console.WriteLine("Input:" + inputFolder + "/ Output:" + outputFolder);
+            var mainController = new MainController(inputFolder, outputFolder);
+            foreach(string file in mainController.FilesToConvert)
+            {
+                Console.WriteLine(file);
+            }
+            Console.WriteLine("Found " + mainController.FilesToConvert.Count + " files to convert in " + inputFolder);
             Console.ReadLine();
         }
     }
