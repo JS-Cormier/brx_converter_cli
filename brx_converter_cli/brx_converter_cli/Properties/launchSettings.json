@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "brx_converter_cli": {
+      "commandName": "Project",
+      "commandLineArgs": "./input ./output"
+    }
+  }
+}
