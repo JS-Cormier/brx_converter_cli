@@ -12,7 +12,10 @@ namespace brx_converter_cli
             var mainController = new MainController(inputFolder, outputFolder);
             Console.WriteLine("Found " + mainController.FilesToConvert.Count + " files to convert in " + inputFolder);
             mainController.ConvertAll();
-            Console.ReadLine();
+            Console.WriteLine("");
+            Console.WriteLine("Conversion completed. MP3 files located in : " + outputFolder + "\\");
+            Console.Write("Press any key to exit...");
+            Console.Read();
         }
     }
 }

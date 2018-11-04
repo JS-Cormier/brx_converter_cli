@@ -207,17 +207,6 @@
         "build": {
           "build/netstandard2.0/NETStandard.Library.targets": {}
         }
-      },
-      "taglib/2.1.0": {
-        "type": "package",
-        "compile": {
-          "lib/policy.2.0.taglib-sharp.dll": {},
-          "lib/taglib-sharp.dll": {}
-        },
-        "runtime": {
-          "lib/policy.2.0.taglib-sharp.dll": {},
-          "lib/taglib-sharp.dll": {}
-        }
       }
     }
   },
@@ -684,24 +673,11 @@
         "netstandard.library.2.0.3.nupkg.sha512",
         "netstandard.library.nuspec"
       ]
-    },
-    "taglib/2.1.0": {
-      "sha512": "PuBT0KO/RJqxVKcM4tE0GDQIOA3584d2pHaLLh+X7tBz9MzFn9/mrVYaA63M+n7ED2dBXVtJBoogGnSxaqE7vg==",
-      "type": "package",
-      "path": "taglib/2.1.0",
-      "files": [
-        "lib/policy.2.0.taglib-sharp.config",
-        "lib/policy.2.0.taglib-sharp.dll",
-        "lib/taglib-sharp.dll",
-        "taglib.2.1.0.nupkg.sha512",
-        "taglib.nuspec"
-      ]
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.1": [
-      "Microsoft.NETCore.App >= 2.1.0",
-      "taglib >= 2.1.0"
+      "Microsoft.NETCore.App >= 2.1.0"
     ]
   },
   "packageFolders": {
@@ -749,10 +725,6 @@
             "target": "Package",
             "version": "[2.1.0, )",
             "autoReferenced": true
-          },
-          "taglib": {
-            "target": "Package",
-            "version": "[2.1.0, )"
           }
         },
         "imports": [
@@ -762,17 +734,5 @@
         "warn": true
       }
     }
-  },
-  "logs": [
-    {
-      "code": "NU1701",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Package 'taglib 2.1.0' was restored using '.NETFramework,Version=v4.6.1' instead of the project target framework '.NETCoreApp,Version=v2.1'. This package may not be fully compatible with your project.",
-      "libraryId": "taglib",
-      "targetGraphs": [
-        ".NETCoreApp,Version=v2.1"
-      ]
-    }
-  ]
+  }
 }

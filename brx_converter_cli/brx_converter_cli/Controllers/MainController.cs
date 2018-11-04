@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Text;
 
 namespace brx_converter_cli.Controllers
 {
@@ -48,11 +46,12 @@ namespace brx_converter_cli.Controllers
             foreach(string file in FilesToConvert)
             {
                 ClearLine();
-                Console.Write("Converting " + file);
+                UpdateProgressBar(FilesToConvert.IndexOf(file) + 1);
+                Console.Write(" - Converting " + Path.GetRelativePath(_inputFolder, file));
                 byte[] bytes = System.IO.File.ReadAllBytes(file);
                 byte[] reversed = InvertBytesArray(bytes);
-                string outputPath = _outputFolder + file.Replace(_inputFolder, "");
-                outputPath = outputPath.Substring(0, outputPath.Length - 4) + ".mp3";
+                string outputPath = _outputFolder + "\\" + Path.GetRelativePath(_inputFolder, file);
+                outputPath = Path.ChangeExtension(outputPath, ".mp3");
                 string outputPathFolder = Path.GetDirectoryName(outputPath);
                 if(!Directory.Exists(outputPathFolder))
                 {
@@ -60,6 +59,23 @@ namespace brx_converter_cli.Controllers
                 }
                 System.IO.File.WriteAllBytes(outputPath, reversed);
             }
+        }
+
+        private void UpdateProgressBar(int progress)
+        {
+            float perc = ((float)progress / FilesToConvert.Count) * 100;
+            double tenPercents = Math.Truncate(perc / 10);
+            string progressBar = "||";
+            for(int i = 0; i < tenPercents; i++)
+            {
+                progressBar += (char)0x25A0;
+            }
+            for(double i = tenPercents; i < 10; i++)
+            {
+                progressBar += "-";
+            }
+            progressBar += "|| (" + progress + "/" + FilesToConvert.Count + ")";
+            Console.Write(progressBar);
         }
 
         private byte[] InvertBytesArray(byte[] bytes)
