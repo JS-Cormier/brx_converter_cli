@@ -21,15 +21,15 @@ namespace brx_converter_cli.Controllers
             _inputFolder = inputFolder;
             _outputFolder = outputFolder;
             FilesToConvert = new List<string>();
-            populateFilesList(inputFolder);
+            PopulateFilesList(inputFolder);
         }
 
-        private void populateFilesList(string folder)
+        private void PopulateFilesList(string folder)
         {
             string[] subfolders = Directory.GetDirectories(folder);
             foreach(string sub in subfolders)
             {
-                populateFilesList(sub);
+                PopulateFilesList(sub);
             }
 
             foreach(string file in Directory.GetFiles(folder))
